@@ -1,0 +1,56 @@
+{
+	// ref: https://biomejs.dev/reference/configuration/
+	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+	"files": {
+		"ignoreUnknown": true
+	},
+	"formatter": {
+		"formatWithErrors": true
+	},
+	"linter": {
+		"rules": {
+			"all": true,
+			"complexity": {
+				// incompatible with `noPropertyAccessFromIndexSignature` option in tsconfig
+				// ref: https://github.com/biomejs/biome/issues/463
+				"useLiteralKeys": "off"
+			},
+			"correctness": {
+				// this project does not use React
+				"useHookAtTopLevel": "off",
+				// this project uses Bun
+				"noNodejsModules": "off"
+			},
+			"nursery": {
+				"all": true
+			},
+			"suspicious": {
+				// this project runs on Bun
+				"noConsole": "off"
+			}
+		}
+	},
+	"json": {
+		"parser": {
+			"allowComments": true
+		}
+	},
+	"overrides": [
+		{
+			// disable noDefaultExport rule for config files
+			"include": ["**/*.config.*"],
+			"linter": {
+				"rules": {
+					"style": {
+						"noDefaultExport": "off"
+					}
+				}
+			}
+		}
+	]
+}

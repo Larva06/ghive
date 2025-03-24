@@ -1,0 +1,39 @@
+# ref: https://mise.jdx.dev/configuration.html
+#:schema https://mise.jdx.dev/schema/mise.json
+
+[tools]
+bun = "1.2.5"
+node = "23.10.0"
+biome = "1.9.4"
+# required for actionlint
+shellcheck = "0.10.0"
+actionlint = "1.7.7"
+"aqua:suzuki-shunsuke/ghalint" = "1.2.3"
+"aqua:suzuki-shunsuke/pinact" = "2.1.0"
+taplo = "0.9.3"
+yamlfmt = "0.16.0"
+# required for pipx backend
+uv = "0.6.9"
+yamllint = "1.37.0"
+typos = "1.30.2"
+"npm:ignore-sync" = "8.0.0"
+"npm:jschema-validator" = "1.0.12"
+
+[settings]
+experimental = true
+
+[settings.npm]
+bun = true
+
+[settings.pipx]
+uvx = true
+
+[task_config]
+includes = ["tasks.toml", "tasks"]
+
+[hooks]
+postinstall = """
+{% if env.CI is undefined %}
+  mise run buni
+{% endif %}
+"""

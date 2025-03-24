@@ -1,0 +1,10 @@
+{
+	// ref: https://code.visualstudio.com/docs/editor/extension-marketplace#_workspace-recommended-extensions
+	"recommendations": [
+		"oven.bun-vscode",
+		"biomejs.biome",
+		"bluebrown.yamlfmt",
+		"github.vscode-github-actions",
+		"tamasfe.even-better-toml" // for toml
+	]
+}

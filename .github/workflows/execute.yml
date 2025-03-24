@@ -1,0 +1,59 @@
+name: Execute ghive
+
+on:
+  workflow_dispatch:
+  schedule:
+    # run every hour
+    - cron: "0 * * * *"
+
+permissions: {}
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  execute:
+    environment: production
+
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read # for checkout
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      - name: Install mise
+        uses: jdx/mise-action@5083fe46898c414b2475087cc79da59e7da859e8 # v2.1.11
+        with:
+          version: 2025.3.7
+          cache_save: ${{ github.ref_name == 'main' }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Execute ghive
+        run: mise run execute
+        env:
+          GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
+          GOOGLE_SERVICE_ACCOUNT_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_KEY }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          USER_EMAILS_ALLOW_LIST: ${{ secrets.USER_EMAILS_ALLOW_LIST }}
+          ROOT_FOLDERS_ALLOW_LIST: ${{ secrets.ROOT_FOLDERS_ALLOW_LIST }}
+
+  actions-timeline:
+    needs:
+      - execute
+    if: ${{ !cancelled() }}
+
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      actions: read
+
+    steps:
+      - name: actions-timeline
+        uses: Kesin11/actions-timeline@427ee2cf860166e404d0d69b4f2b24012bb7af4f # v2.2.3

@@ -1,0 +1,19 @@
+{
+	"$schema": "https://json.schemastore.org/package.json",
+	"dependencies": {
+		"@discordjs/builders": "1.10.1",
+		"@googleapis/drive": "11.0.0",
+		"discord.js": "14.18.0",
+		"zod": "3.24.2"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "19.8.0",
+		"@commitlint/config-conventional": "19.8.0",
+		"@commitlint/cz-commitlint": "19.8.0",
+		"@commitlint/types": "19.8.0",
+		"@risu729/tsconfigs": "1.0.0",
+		"@types/bun": "1.2.5",
+		"commitizen": "4.3.1",
+		"typescript": "5.8.2"
+	}
+}

@@ -15,7 +15,7 @@ yamlfmt = "0.16.0"
 # required for pipx backend
 uv = "0.6.9"
 yamllint = "1.37.0"
-typos = "1.30.2"
+typos = "1.30.3"
 "npm:ignore-sync" = "8.0.0"
 "npm:jschema-validator" = "1.0.12"
 

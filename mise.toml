@@ -17,7 +17,7 @@ uv = "0.6.12"
 yamllint = "1.37.0"
 typos = "1.31.1"
 "npm:ignore-sync" = "8.0.0"
-"npm:jschema-validator" = "1.0.12"
+"npm:jschema-validator" = "1.0.13"
 
 [settings]
 experimental = true

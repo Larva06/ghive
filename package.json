@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json.schemastore.org/package.json",
 	"dependencies": {
-		"@discordjs/builders": "1.11.1",
+		"@discordjs/builders": "1.11.2",
 		"@googleapis/drive": "12.0.0",
 		"discord.js": "14.19.2",
 		"zod": "3.24.3"

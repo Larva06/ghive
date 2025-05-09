@@ -3,7 +3,7 @@
 
 [tools]
 bun = "1.2.12"
-node = "24.0.0"
+node = "24.0.1"
 biome = "1.9.4"
 # required for actionlint
 shellcheck = "0.10.0"

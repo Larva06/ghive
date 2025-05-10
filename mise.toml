@@ -2,7 +2,7 @@
 #:schema https://mise.jdx.dev/schema/mise.json
 
 [tools]
-bun = "1.2.12"
+bun = "1.2.13"
 node = "24.0.1"
 biome = "1.9.4"
 # required for actionlint

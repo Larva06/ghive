@@ -28,11 +28,7 @@ export const sendTransferNotification = async ({
 				.setDescription(
 					`Transferred ownership of ${
 						file.name ? `[${file.name}](${file.url})` : file.url
-					} from ${
-						previousOwner.name
-							? `${previousOwner.name} (${previousOwner.email})`
-							: previousOwner.email
-					}`,
+					} from ${previousOwner.email}`,
 				)
 				.setColor(0xfff42b)
 				.setFooter({

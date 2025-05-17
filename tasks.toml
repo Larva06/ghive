@@ -50,7 +50,7 @@ run = "yamlfmt {% if env.LINT is defined %}-lint{% endif %} ."
 run = "yamllint --strict ."
 
 ["check:typos"]
-run = "typos {% if env.LINT is undefined %}--write-changes{% endif %}"
+run = "typos --hidden {% if env.LINT is undefined %}--write-changes{% endif %}"
 
 ["check:jsonschema"]
 run = "jschema-validator"

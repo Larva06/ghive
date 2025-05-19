@@ -18,9 +18,7 @@ const envSchema = z
 		 * The email must end with `@iam.gserviceaccount.com`.
 		 */
 		// biome-ignore lint/style/useNamingConvention:
-		GOOGLE_SERVICE_ACCOUNT_EMAIL: z
-			.email()
-			.endsWith("iam.gserviceaccount.com"),
+		GOOGLE_SERVICE_ACCOUNT_EMAIL: z.email().endsWith("iam.gserviceaccount.com"),
 
 		/**
 		 * Private key of the Google Cloud service account used for the Google Drive API.

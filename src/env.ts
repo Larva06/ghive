@@ -1,5 +1,5 @@
 import { env as rawEnv } from "bun";
-import z from "zod";
+import z from "zod/v4";
 
 const listVariableSchema = z.union([z.string(), z.undefined()]).transform(
 	(value: string | undefined): Set<string> =>
@@ -19,7 +19,6 @@ const envSchema = z
 		 */
 		// biome-ignore lint/style/useNamingConvention:
 		GOOGLE_SERVICE_ACCOUNT_EMAIL: z
-			.string()
 			.email()
 			.endsWith("iam.gserviceaccount.com"),
 
@@ -50,7 +49,6 @@ const envSchema = z
 		 */
 		// biome-ignore lint/style/useNamingConvention:
 		DISCORD_WEBHOOK_URL: z
-			.string()
 			.url()
 			.startsWith("https://discord.com/api/webhooks/")
 			.or(z.literal("null").transform(() => undefined)),
@@ -68,7 +66,7 @@ const envSchema = z
 		 * Example: `user1@example.com,user2@example.com`
 		 */
 		// biome-ignore lint/style/useNamingConvention:
-		USER_EMAILS_ALLOW_LIST: listVariableSchema.pipe(z.set(z.string().email())),
+		USER_EMAILS_ALLOW_LIST: listVariableSchema.pipe(z.set(z.email())),
 
 		/**
 		 * A list of Google Drive folder IDs allowed as root folders for ownership transfer.

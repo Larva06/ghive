@@ -4,7 +4,7 @@
     "": {
       "dependencies": {
         "@discordjs/builders": "1.11.2",
-        "@googleapis/drive": "12.0.0",
+        "@googleapis/drive": "12.1.0",
         "discord.js": "14.19.3",
         "zod": "3.25.7",
       },
@@ -73,7 +73,7 @@
 
     "@discordjs/ws": ["@discordjs/ws@1.2.2", "", { "dependencies": { "@discordjs/collection": "^2.1.0", "@discordjs/rest": "^2.5.0", "@discordjs/util": "^1.1.0", "@sapphire/async-queue": "^1.5.2", "@types/ws": "^8.5.10", "@vladfrangu/async_event_emitter": "^2.2.4", "discord-api-types": "^0.38.1", "tslib": "^2.6.2", "ws": "^8.17.0" } }, "sha512-dyfq7yn0wO0IYeYOs3z79I6/HumhmKISzFL0Z+007zQJMtAFGtt3AEoq1nuLXtcunUE5YYYQqgKvybXukAK8/w=="],
 
-    "@googleapis/drive": ["@googleapis/drive@12.0.0", "", { "dependencies": { "googleapis-common": "^7.0.0" } }, "sha512-bAZ82QKSuvzT4UNuuistEJCGjYCGcDYo2WsZ8S7KmN/gaHs2oz5U07/y/ITbzganqMtvXw7B6YG1f76k7F8+0Q=="],
+    "@googleapis/drive": ["@googleapis/drive@12.1.0", "", { "dependencies": { "googleapis-common": "^7.0.0" } }, "sha512-Y5JyrpjHxdo4uJTr/7MLE5NXpBjdU6JBOVWgMcLH7HdqwiZx9QTv+YloQ5SwExMlfDWcOEHmzMcyYWv4HoVtSA=="],
 
     "@risu729/tsconfigs": ["@risu729/tsconfigs@1.0.1", "", {}, "sha512-aOXwG0bxFmZw9D/eD8mOQTd3qPt/9X7G1u20a3xz/xmpMmbLZdwsU/rH4lAVBem9EO9F/gQawiETeChu6Ta/vw=="],
 

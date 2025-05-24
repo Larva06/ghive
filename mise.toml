@@ -10,7 +10,7 @@ shellcheck = "0.10.0"
 actionlint = "1.7.7"
 ghalint = "1.4.0"
 pinact = "3.1.2"
-taplo = "0.9.3"
+taplo = "0.10.0"
 yamlfmt = "0.16.0"
 # required for pipx backend
 uv = "0.7.8"

@@ -12,7 +12,7 @@
 		"@commitlint/cz-commitlint": "19.8.1",
 		"@commitlint/types": "19.8.1",
 		"@risu729/tsconfigs": "1.0.1",
-		"@types/bun": "1.2.14",
+		"@types/bun": "1.2.15",
 		"commitizen": "4.3.1",
 		"typescript": "5.8.3"
 	}

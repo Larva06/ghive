@@ -3,7 +3,7 @@
 	"dependencies": {
 		"@discordjs/builders": "1.11.2",
 		"@googleapis/drive": "13.0.1",
-		"discord.js": "14.19.3",
+		"discord.js": "14.20.0",
 		"zod": "3.25.64"
 	},
 	"devDependencies": {

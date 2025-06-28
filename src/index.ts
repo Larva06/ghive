@@ -1,3 +1,4 @@
+// biome-ignore-all lint/suspicious/noConsole: allow console logs in index.ts
 import { auth, drive_v3 } from "@googleapis/drive";
 import { sendTransferNotification } from "./discord.ts";
 import { env } from "./env.ts";
@@ -12,10 +13,10 @@ const lazyInit = <T>(fn: () => T): (() => T) => {
 const driveClient = new drive_v3.Drive({
 	auth: new auth.GoogleAuth({
 		credentials: {
-			// biome-ignore lint/style/useNamingConvention:
+			// biome-ignore-start lint/style/useNamingConvention: follow Google API naming convention
 			client_email: env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-			// biome-ignore lint/style/useNamingConvention:
 			private_key: env.GOOGLE_SERVICE_ACCOUNT_KEY,
+			// biome-ignore-end lint/style/useNamingConvention: follow Google API naming convention
 		},
 		// ref: https://developers.google.com/identity/protocols/oauth2/scopes#drive
 		scopes: [
@@ -35,6 +36,7 @@ async function* retrieveAllFiles(
 ): AsyncGenerator<drive_v3.Schema$File> {
 	let pageToken: string | undefined;
 	do {
+		// biome-ignore lint/nursery/noAwaitInLoop: response is required in the loop
 		const response = await driveClient.files.list({
 			...listParams,
 			fields: `${listParams.fields}, nextPageToken`,
@@ -94,6 +96,7 @@ const retrieveAllowedFolders = async (): Promise<Set<string>> => {
 	return allowedFolders;
 };
 
+// biome-ignore lint/nursery/noExcessiveLinesPerFunction: ignore for now
 const main = async (): Promise<void> => {
 	// filter files by owner if USER_EMAILS_ALLOW_LIST is set
 	const ownerQuery =
@@ -140,10 +143,10 @@ const main = async (): Promise<void> => {
 		await driveClient.permissions.update({
 			fileId: file.id,
 			permissionId: pendingOwnerPermission.id,
-			transferOwnership: true,
 			requestBody: {
 				role: "owner",
 			},
+			transferOwnership: true,
 		});
 		// Do not print file info to the console because GitHub Actions logs are public
 		console.info("Transferred ownership of a file.");
@@ -153,8 +156,8 @@ const main = async (): Promise<void> => {
 				url: file.webViewLink ?? undefined,
 			},
 			previousOwner: {
-				name: previousOwner?.displayName ?? undefined,
 				email: previousOwner?.emailAddress ?? undefined,
+				name: previousOwner?.displayName ?? undefined,
 			},
 		});
 	}

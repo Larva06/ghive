@@ -30,7 +30,7 @@ export const sendTransferNotification = async ({
 						file.name ? `[${file.name}](${file.url})` : file.url
 					} from ${previousOwner.email}`,
 				)
-				.setColor(0xfff42b)
+				.setColor(0xff_f4_2b)
 				.setFooter({
 					text: env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
 				})

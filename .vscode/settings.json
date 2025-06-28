@@ -1,32 +1,32 @@
 {
 	// ref: https://code.visualstudio.com/docs/getstarted/settings#_workspace-settings
 
-	"files.autoSave": "afterDelay",
-	"editor.formatOnSave": true,
-	"editor.formatOnPaste": true,
+	"[javascript][typescript][json][jsonc]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[toml]": {
+		"editor.defaultFormatter": "tamasfe.even-better-toml"
+	},
+
+	"[yaml][github-actions-workflow]": {
+		"editor.defaultFormatter": "bluebrown.yamlfmt"
+	},
 
 	// ref: https://biomejs.dev/reference/vscode/
 	"editor.codeActionsOnSave": {
 		"quickfix.biome": "explicit",
 		"source.organizeImports.biome": "explicit"
 	},
-	// ref: https://biomejs.dev/internals/language-support/
-	"[javascript][typescript][json][jsonc]": {
-		"editor.defaultFormatter": "biomejs.biome"
-	},
-
-	"[yaml][github-actions-workflow]": {
-		"editor.defaultFormatter": "bluebrown.yamlfmt"
-	},
-	"[toml]": {
-		"editor.defaultFormatter": "tamasfe.even-better-toml"
-	},
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
 
 	"files.associations": {
+		".czrc": "jsonc",
 		"*ignore-sync": "ini",
-		"shellcheckrc": "ini",
-		".czrc": "jsonc"
+		"shellcheckrc": "ini"
 	},
+
+	"files.autoSave": "afterDelay",
 
 	"files.readonlyInclude": {
 		// auto-generated

@@ -4,7 +4,7 @@
 		"@discordjs/builders": "1.11.2",
 		"@googleapis/drive": "13.0.1",
 		"discord.js": "14.21.0",
-		"zod": "3.25.75"
+		"zod": "3.25.76"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "19.8.1",

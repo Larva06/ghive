@@ -1,5 +1,5 @@
 import { env as rawEnv } from "bun";
-import z from "zod/v4";
+import z from "zod";
 
 const listVariableSchema = z.union([z.string(), z.undefined()]).transform(
 	(value: string | undefined): Set<string> =>

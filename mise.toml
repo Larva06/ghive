@@ -13,7 +13,7 @@ pinact = "3.3.0"
 taplo = "0.10.0"
 yamlfmt = "0.17.2"
 # required for pipx backend
-uv = "0.7.20"
+uv = "0.7.21"
 yamllint = "1.37.1"
 typos = "1.34.0"
 "npm:ignore-sync" = "8.0.0"

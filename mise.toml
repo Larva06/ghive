@@ -9,7 +9,7 @@ biome = "2.1.1"
 shellcheck = "0.10.0"
 actionlint = "1.7.7"
 ghalint = "1.5.1"
-pinact = "3.3.0"
+pinact = "3.3.1"
 taplo = "0.10.0"
 yamlfmt = "0.17.2"
 # required for pipx backend

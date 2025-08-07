@@ -14,6 +14,6 @@
 		"@risu729/tsconfigs": "1.0.1",
 		"@types/bun": "1.2.19",
 		"commitizen": "4.3.1",
-		"typescript": "5.8.3"
+		"typescript": "5.9.2"
 	}
 }

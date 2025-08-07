@@ -6,7 +6,7 @@ bun = "1.2.19"
 node = "24.4.1"
 biome = "2.1.2"
 # required for actionlint
-shellcheck = "0.10.0"
+shellcheck = "0.11.0"
 actionlint = "1.7.7"
 ghalint = "1.5.3"
 pinact = "3.3.2"

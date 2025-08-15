@@ -13,7 +13,7 @@
         "@commitlint/config-conventional": "19.8.1",
         "@commitlint/cz-commitlint": "19.8.1",
         "@commitlint/types": "19.8.1",
-        "@risu729/tsconfigs": "1.0.1",
+        "@risu729/tsconfigs": "2.0.0",
         "@types/bun": "1.2.20",
         "commitizen": "4.3.1",
         "typescript": "5.9.2",
@@ -75,7 +75,7 @@
 
     "@googleapis/drive": ["@googleapis/drive@15.0.0", "", { "dependencies": { "googleapis-common": "^8.0.2-rc.0" } }, "sha512-PGuhTZMrS8HCJnFpYRhCU92GXgWEszku6XA517rYv1ohNB3nJFrVvjdMvzr/QOD4Q8R4Kg3fFLl6ULpKewLc0A=="],
 
-    "@risu729/tsconfigs": ["@risu729/tsconfigs@1.0.1", "", {}, "sha512-aOXwG0bxFmZw9D/eD8mOQTd3qPt/9X7G1u20a3xz/xmpMmbLZdwsU/rH4lAVBem9EO9F/gQawiETeChu6Ta/vw=="],
+    "@risu729/tsconfigs": ["@risu729/tsconfigs@2.0.0", "", {}, "sha512-j0Tx/OeacDkCN0IiaU/cp3bF6s+nNydCq3nK3lUA3fUU/pwcHrTwnOP917AsRpsRu4RcLWWNpgl3Z4bqzNvv9w=="],
 
     "@sapphire/async-queue": ["@sapphire/async-queue@1.5.5", "", {}, "sha512-cvGzxbba6sav2zZkH8GPf2oGk9yYoD5qrNWdu9fRehifgnFZJMV+nuy2nON2roRO4yQQ+v7MK/Pktl/HgfsUXg=="],
 

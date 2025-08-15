@@ -36,7 +36,7 @@ async function* retrieveAllFiles(
 ): AsyncGenerator<drive_v3.Schema$File> {
 	let pageToken: string | undefined;
 	do {
-		// biome-ignore lint/nursery/noAwaitInLoop: response is required in the loop
+		// biome-ignore lint/performance/noAwaitInLoops: response is required in the loop
 		const response = await driveClient.files.list({
 			...listParams,
 			fields: `${listParams.fields}, nextPageToken`,
@@ -96,7 +96,6 @@ const retrieveAllowedFolders = async (): Promise<Set<string>> => {
 	return allowedFolders;
 };
 
-// biome-ignore lint/nursery/noExcessiveLinesPerFunction: ignore for now
 const main = async (): Promise<void> => {
 	// filter files by owner if USER_EMAILS_ALLOW_LIST is set
 	const ownerQuery =

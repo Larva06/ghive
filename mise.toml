@@ -7,7 +7,7 @@ node = "25.2.1"
 biome = "2.2.7"
 # required for actionlint
 shellcheck = "0.11.0"
-actionlint = "1.7.9"
+actionlint = "1.7.10"
 ghalint = "1.5.4"
 pinact = "3.8.0"
 taplo = "0.10.0"
